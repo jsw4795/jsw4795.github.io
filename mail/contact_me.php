@@ -1,19 +1,19 @@
 <?php
 // Check for empty fields
-if(empty($_POST['name'])  		||
-   empty($_POST['email']) 		||
-   empty($_POST['phone']) 		||
-   empty($_POST['message'])	||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+if(empty($_POST['이름'])  		||
+   empty($_POST['이메일']) 		||
+   empty($_POST['휴대폰 번호']) 		||
+   empty($_POST['메세지'])	||
+   !filter_var($_POST['이메일'],FILTER_VALIDATE_EMAIL))
    {
 	echo "No arguments Provided!";
 	return false;
    }
 	
-$name = strip_tags(htmlspecialchars($_POST['name']));
-$email_address = strip_tags(htmlspecialchars($_POST['email']));
-$phone = strip_tags(htmlspecialchars($_POST['phone']));
-$message = strip_tags(htmlspecialchars($_POST['message']));
+$name = strip_tags(htmlspecialchars($_POST['이름']));
+$email_address = strip_tags(htmlspecialchars($_POST['이메일 주소']));
+$phone = strip_tags(htmlspecialchars($_POST['휴대폰 번호']));
+$message = strip_tags(htmlspecialchars($_POST['메세지']));
 	
 // Create the email and send the message
 $to = 'jsw4795@naver.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
